@@ -21,7 +21,10 @@ p {
 <h1>Изолација на кластер Банско</h1><br />
 <h2>оште</h2>
 
-<p id="demo"></p>
+<p id="asimpto"></p>
+
+<h2>тези с'с симптоми</h2>
+<p id="simpto"></p>
 
 <div>ZADOLZHITELNA TERAPIJA ZA KOVID<br />
 - vitamin c 1000 x1 na den<br />
@@ -32,6 +35,7 @@ p {
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 27, 2022 00:00:00").getTime();
+var countDownDate1 = new Date("Feb 6, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -41,6 +45,7 @@ var x = setInterval(function() {
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
+  var distance1 = countDownDate1 - now;
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -48,9 +53,17 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
+   
+  var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+  var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
+    
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "д " + hours + "ч "
+  document.getElementById("asimpto").innerHTML = days + "д " + hours + "ч "
   + minutes + "м " + seconds + "с";
+  document.getElementById("simpto").innerHTML = days1 + "д " + hours1 + "ч "
+  + minutes1 + "м " + seconds1 + "с";
     
   // If the count down is over, write some text 
   if (distance < 0) {
