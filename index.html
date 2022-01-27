@@ -54,23 +54,16 @@ var x = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-   
-  var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
-  var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
+  
     
   // Output the result in an element with id="demo"
   document.getElementById("asimpto").innerHTML = days + "д " + hours + "ч "
   + minutes + "м " + seconds + "с";
-  document.getElementById("simpto").innerHTML = days1 + "д " + hours1 + "ч "
-  + minutes1 + "м " + seconds1 + "с";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Честитки, слобода!";
+    document.getElementById("asimpto").innerHTML = "Честитки, слобода!";
   }
 }, 1000);
 </script>
